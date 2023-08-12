@@ -78,8 +78,10 @@ input {
   margin: 0px;
   padding: 0px;
   color: var(--color_body);
-  font-size: 12px;
-  line-height: 16px;
+  /* font-size: 12px; */
+  /* line-height: 16px; */
+  font-size: 1.4rem;
+  line-height: 1.7rem;
   font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
   font-weight: 500;
   letter-spacing: -0.4px;
@@ -450,6 +452,55 @@ section[id^=main] {
 
 #main-newstand {
   height: 426px;
+  display: flex;
+  flex-flow: column;
+}
+
+#main-newstand-top {
+  flex: 1;
+}
+
+#main-newstand header {
+  font-size: 1.6rem;
+  color: rgba(8, 8, 8, .5);
+  padding: 18px 20px 17px;
+  text-align: left;
+}
+
+#main-newstand a {
+  text-decoration: none;
+}
+
+#main-newstand header a.bold {
+  font-weight: bold;
+  color: #000;
+}
+
+#main-newstand a:hover {
+  text-decoration: underline;
+}
+
+#main-newstand a:visited {
+  color: inherit;
+}
+
+#main-newstand-gray {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  padding: 12px 20px;
+  background-color: var(--color_option_bg);
+}
+
+#main-newstand-grid {
+  margin: 18px 20px 18px 20px;
+  /** 임시 **/
+  display: flex;
+}
+
+#main-newstand footer {
+  padding: 10px 0 11px;
+  border-top: 1px solid var(--color_border_in);
 }
 
 #main-shopping {

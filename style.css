@@ -93,6 +93,19 @@ ul {
   padding: 0px;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: inherit;
+}
+
 #wrap {
   text-align: center;
 }
@@ -313,7 +326,6 @@ ul {
 }
 
 #nav a {
-  text-decoration: none;
   text-align: center;
 }
 
@@ -460,42 +472,171 @@ section[id^=main] {
   flex: 1;
 }
 
-#main-newstand header {
+#main-newstand-top header {
+  display: flex;
+  align-items: center;
   font-size: 1.6rem;
   color: rgba(8, 8, 8, .5);
   padding: 18px 20px 17px;
   text-align: left;
 }
 
-#main-newstand a {
-  text-decoration: none;
+#main-newstand-top header a {
+  color: rgba(8, 8, 8, .5);
+  font-weight: bold;
+  line-height: 23px;
 }
 
-#main-newstand header a.bold {
-  font-weight: bold;
+#main-newstand-top header a.bold {
   color: #000;
 }
 
-#main-newstand a:hover {
-  text-decoration: underline;
+#main-newstand-top header a.dot::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color_dot_divider);
+  margin: 9px 7px 0;
+  border-radius: 50%;
+  vertical-align: top;
 }
 
-#main-newstand a:visited {
-  color: inherit;
+#main-newstand-top header a.slash {
+  position: relative;
+  padding-left: 26px;
+}
+
+#main-newstand-top header a.slash::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 13px;
+  width: 1px;
+  height: 15px;
+  background-color: #d3d5d7;
+  background-color: var(--color_dot_divider);
+  transform: skewX(-15deg);
 }
 
 #main-newstand-gray {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 20px;
   padding: 12px 20px;
   background-color: var(--color_option_bg);
 }
 
-#main-newstand-grid {
-  margin: 18px 20px 18px 20px;
-  /** 임시 **/
+#main-newstand-gray .left {
   display: flex;
+}
+
+#main-newstand-gray .left>a {
+  line-height: 26px;
+  color: #404040;
+  color: var(--color_caption1);
+}
+
+#main-newstand-gray .left>a:after {
+  content: '';
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.8d8afaf9.png);
+  background-size: 434px 409px;
+  background-position: -133px -201px;
+  background-repeat: no-repeat;
+  width: 9px;
+  height: 6px;
+  display: inline-block;
+  margin: 10px 0 0 5px;
+  vertical-align: top;
+}
+
+#main-newstand-animation a {
+  display: inline-block;
+}
+
+#main-newstand-animation a:first-of-type {
+  position: relative;
+  padding-left: 25px;
+  line-height: 26px;
+}
+
+#main-newstand-animation a:first-of-type::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  background-color: #d3d5d7;
+  background-color: var(--color_dot_divider);
+  width: 1px;
+  height: 12px;
+  text-align: left;
+}
+
+#main-newstand-animation a:first-of-type::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background-color: #d3d5d7;
+  background-color: var(--color_dot_divider);
+  margin: 12px 6px 0 6px;
+  border-radius: 50%;
+  vertical-align: top;
+}
+
+#main-newstand-animation a:last-of-type {
+  display: inline-block;
+  width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: -4px;
+}
+
+#main-newstand-gray .right a {
+  display: inline-block;
+  line-height: 26px;
+}
+
+#main-newstand-gray .right a:last-of-type {
+  position: relative;
+  padding-left: 25px;
+  font-weight: bold;
+}
+
+#main-newstand-gray .right a:last-of-type::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  width: 1px;
+  height: 12px;
+  background-color: #d3d5d7;
+  background-color: var(--color_dot_divider);
+}
+
+
+#main-newstand-grid {
+  width: 790px;
+  height: 224px;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  margin: 18px 20px 18px 20px;
+  border: 1px solid var(--color_border_in);
+  border-radius: 4px;
+  background-color: var(--color_border_in);
+}
+
+#main-newstand-grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
 }
 
 #main-newstand footer {
@@ -552,7 +693,6 @@ section[id^=main] {
 }
 
 #main-login>div:last-of-type a {
-  text-decoration: none;
   color: var(--color_caption2);
   letter-spacing: -0.4px;
   position: relative;
@@ -565,10 +705,6 @@ section[id^=main] {
 
 #main-login>div:last-of-type a:visited {
   color: var(--color_caption2);
-}
-
-#main-login>div:last-of-type a:hover {
-  text-decoration: underline;
 }
 
 #main-login>div:last-of-type>a:nth-of-type(2)::before,

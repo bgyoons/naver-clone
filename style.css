@@ -661,13 +661,13 @@ section[id^=main] {
   color: var(--color_caption1);
 }
 
-#main-newstand {
+#main-news-stand {
   height: 426px;
   display: flex;
   flex-flow: column;
 }
 
-#main-newstand-top header a.dot::before {
+#main-news-stand-top header a.dot::before {
   content: '';
   display: inline-block;
   width: 4px;
@@ -678,7 +678,7 @@ section[id^=main] {
   vertical-align: top;
 }
 
-#main-newstand-gray {
+#main-news-stand-gray {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -687,7 +687,7 @@ section[id^=main] {
   background-color: var(--color_option_bg);
 }
 
-#main-newstand-gray .left>a:after {
+#main-news-stand-gray .left>a:after {
   content: '';
   background-image: url(https://pm.pstatic.net/resources/asset/sp_main.8d8afaf9.png);
   background-size: 434px 409px;
@@ -700,22 +700,22 @@ section[id^=main] {
   vertical-align: top;
 }
 
-#main-newstand-animation a,
+#main-news-stand-animation a,
 #main-shopping-gray .left {
   display: inline-block;
 }
 
-#main-newstand-animation a:first-of-type,
+#main-news-stand-animation a:first-of-type,
 #main-shopping-gray .left .benefit {
   position: relative;
   line-height: 26px;
 }
 
-#main-newstand-animation a:first-of-type {
+#main-news-stand-animation a:first-of-type {
   padding-left: 25px;
 }
 
-#main-newstand-animation a:first-of-type::before {
+#main-news-stand-animation a:first-of-type::before {
   content: '';
   display: block;
   position: absolute;
@@ -728,7 +728,7 @@ section[id^=main] {
   text-align: left;
 }
 
-#main-newstand-animation a:first-of-type::after,
+#main-news-stand-animation a:first-of-type::after,
 #main-shopping-gray .left .benefit::after {
   content: "";
   display: inline-block;
@@ -741,7 +741,7 @@ section[id^=main] {
   vertical-align: top;
 }
 
-#main-newstand-animation a:last-of-type {
+#main-news-stand-animation a:last-of-type {
   display: inline-block;
   width: 400px;
   text-overflow: ellipsis;
@@ -750,18 +750,18 @@ section[id^=main] {
   vertical-align: -4px;
 }
 
-#main-newstand-gray .right a {
+#main-news-stand-gray .right a {
   display: inline-block;
   line-height: 26px;
 }
 
-#main-newstand-gray .right a:last-of-type {
+#main-news-stand-gray .right a:last-of-type {
   position: relative;
   padding-left: 25px;
   font-weight: bold;
 }
 
-#main-newstand-gray .right a:last-of-type::before {
+#main-news-stand-gray .right a:last-of-type::before {
   content: "";
   display: block;
   position: absolute;
@@ -773,7 +773,7 @@ section[id^=main] {
   background-color: var(--color_dot_divider);
 }
 
-#main-newstand-grid {
+#main-news-stand-grid {
   width: 790px;
   height: 224px;
   display: grid;
@@ -786,38 +786,38 @@ section[id^=main] {
   background-color: var(--color_border_in);
 }
 
-#main-newstand-grid div {
+#main-news-stand-grid div {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
 }
 
-#main-newstand footer .text .title {
+#main-news-stand footer .text .title {
   color: #3a67ea;
   color: var(--color_news);
 }
 
-#main-newstand footer .list,
-#main-newstand footer .grid {
+#main-news-stand footer .list,
+#main-news-stand footer .grid {
   position: absolute;
   top: 0;
   background-color: transparent;
   border: none;
 }
 
-#main-newstand footer .list {
+#main-news-stand footer .list {
   padding: 18px 9px 18px 20px;
   right: 49px;
 }
 
-#main-newstand footer .grid {
+#main-news-stand footer .grid {
   padding: 18px 20px 18px 9px;
   right: 0;
 }
 
-#main-newstand footer .list::before,
-#main-newstand footer .grid::before {
+#main-news-stand footer .list::before,
+#main-news-stand footer .grid::before {
   content: "";
   display: block;
   background-image: url(https://pm.pstatic.net/resources/asset/sp_main.8d8afaf9.png);
@@ -828,12 +828,12 @@ section[id^=main] {
   height: 20px;
 }
 
-#main-newstand footer .list:hover::before {
+#main-news-stand footer .list:hover::before {
   background-position: -391px -208px;
   cursor: pointer;
 }
 
-#main-newstand footer .grid::before {
+#main-news-stand footer .grid::before {
   background-position: -63px -376px;
 }
 

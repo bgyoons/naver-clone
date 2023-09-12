@@ -147,34 +147,3 @@ CSS의 가상 앨리먼트는 선택자에 추가되는 키워드로, 선택한 
 ## 결론
 
 네이버를 클론코딩하며 보았을 때, 아이콘 같은 상징적인 이미지이지만 대체되는 텍스트 등이 있을 때 배경 img 태그와 아이콘을 넣을 img 태그를 생성하여 여러 태그를 만드는 것 보다 가상 앨리먼트인 `::before`과 `::after`를 사용하여 넣는 것도 좋은 방법이 될 수 있을 것 같다. 또한 의미 없이 구분하기 위한 앨리먼트들에도 이 가상 선택자들을 사용하면 의미 없는 태그의 남용 없이 사용할 수 있을 것 같다.
-
-2. :focus-within
-- CSS pseudo-classes
-:active - Is the element being clicked?
-:checked - Is the radio/checkbox/option checked? (This allows for conditional styling through the use of a checkbox!)
-:empty - Is the element empty?
-:fullscreen - Is the document in full-screen mode?
-:focus - Does the element have keyboard focus?
-:focus-within - Does the element, or any of its children, have keyboard focus?
-:has([selector]) - Does the element contain a child that matches [selector]? (Sadly, not supported by any of the major browsers.)
-:hover - Does the mouse hover over this element?
-:in-range/:out-of-range - Is the input value between/outside min and max limits?
-:invalid/:valid - Does the form element have invalid/valid contents?
-:link - Is this an unvisited link?
-:not() - Invert the selector.
-:target - Is this element the target of the URL fragment?
-:visited - Has the user visited this link before?
-
-3. nth-of-type
-
-4. aside[id$=ad], section[id^=main]
-
-5. flex-direction과 flex-flow 차이
-
-6. grid와 flex
-
-7. flex
-
-8. vertical-align
-
-9. grid. grid-row

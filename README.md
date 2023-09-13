@@ -152,6 +152,88 @@ CSS의 가상 앨리먼트는 선택자에 추가되는 키워드로, 선택한 
 
 
 
+# `:nth-of-type`
+
+## 정의
+
+`:nth-of-type`은 CSS 가상 클래스(pseudo-class)로 형제 앨리먼트 중에서 같은 타입(태그 이름)으로 순서를 매기는 것이다.
+
+### `:nth-child`란?
+
+`:nth-of-type`과 비슷하게 형제 엘리먼트 간에 순서를 매기는 다른 방법이 있다. 
+
+`:nth-child`라고 이 또한 CSS 가상 클래스(pseudo-class)로 `:nth-of-type`와 다른 점은 `:nth-child`는 같은 타입(태그 이름)을 체크하지 않고 순서를 매긴다는 것이다.
+
+즉, 형제 앨리먼트들의 태그가 `div`, `p`, `span`, `li`, ...로 섞여 있을 때 `li:nth-child(n)`을 했다면 태그 종류의 상관없이 태그가 삽입되어있는 순서대로 형제 앨리먼트 모두가 순서가 매겨지고 지정한 n의 조건대로 스타일 적용이 된다.
+
+반면, 같은 조건에서 `li:nth-of-type(n)`으로 했다면 `li` 태그만 첫째, 둘째, 셋째, ... 로 순서가 매겨진다.
+
+## 사용법/예시
+
+### `:nth-of-type`
+
+html과 css 구조는 다음과 같다.
+
+`li` 태그인 경우는 `list-style-type` 프로퍼티를 이용해 숫자로 리스트를 매기도록 했고, 전체 형제 앨리먼트의 순서를 알기 위해 각 태그의 내용을 1부터 10까지 지정했다. 짝수에는 오렌지 테두리를, 홀수에는 초록색 테두리를 지정했다.
+
+```html
+<ul>
+  <div>one</div>
+  <li>two</li>
+  <li>three</li>
+  <li>four</li>
+  <div>five</div>
+  <li>six</li>
+  <div>seven</div>
+  <li>eight</li>
+  <li>nine</li>
+  <li>ten</li>
+</ul>
+```
+
+```css
+li {
+  list-style-type: numeric;
+}
+
+li:nth-of-type(1) {
+  font-weight: bold
+}
+
+li:nth-of-type(even) {  /* 2n */
+  border: 2px solid orange;
+}
+
+li:nth-of-type(odd) {  /* 2n + 1 */
+  border: 2px solid green;
+}
+```
+
+<img width="300" src="./readme/nth_type.png">
+
+결과는 리스트 태그만 순서를 매긴 것을 알 수 있다. 5번째 형제의 div 태그는 홀수이지만 순서에서 아예 배제되어있음을 알 수 있다.
+
+### `:nth-child`
+
+html은 위와 동일하고 css만 다음과 같이 변경한다. (첫 번째 자식의 font-weight 속성은 삭제했다.)
+
+```css
+li:nth-child(even) {
+  border: 2px solid orange;
+}
+
+li:nth-child(odd) {
+  border: 2px solid green;
+}
+```
+
+<img width="300" src="./readme/nth_child.png">
+
+`:nth-of-type`과 다르게 우선 전체 형제 앨리먼트의 순서를 매긴 것을 알 수 있다. 5, 7번째 형제의 div 태그는 홀수이지만 리스트 태그가 아니기 때문에 초록 테두리가 적용되지 않았다.
+
+따라서 전체 태그의 순서나 규칙성에 스타일을 부여해야 한다면 `nth-child`를, 특정 태그 형제들끼리만이라면 `nth-of-type`를 사용하면 될 것 같다.
+
+
 # `:focus-within`
 
 ## 정의
@@ -163,21 +245,6 @@ placeholder에서 작업
 
 ## 결론
 
-
-
-
-
-# `nth-of-type`
-
-## 정의
-
-### `nth-of-type`. `:nth-child()` 차이
-
-#### `:nth-child()`린?
-
-## 사용법/예시
-
-## 결론
 
 
 

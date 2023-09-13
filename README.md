@@ -1,5 +1,14 @@
 # naver-clone
-네이버 클론코딩
+
+### 네이버 클론코딩하며 배운 부분 정리 및 순서
+
+- [`::before` & `::after`](#before--after)
+- [`:nth-of-type`](#nth-of-type)
+- `:focus-within`(예정)
+- 속성 선택자 종류(예정)
+- flex-direction과 flex-flow (예정)
+- grid와 flex(예정)
+- vertical-align(예정)
 
 # `::before` & `::after`
 

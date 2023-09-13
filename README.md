@@ -1,7 +1,7 @@
 # naver-clone
 네이버 클론코딩
 
-# 1. `::before` & `::after`
+# `::before` & `::after`
 
 ## 정의
 
@@ -147,3 +147,74 @@ CSS의 가상 앨리먼트는 선택자에 추가되는 키워드로, 선택한 
 ## 결론
 
 네이버를 클론코딩하며 보았을 때, 아이콘 같은 상징적인 이미지이지만 대체되는 텍스트 등이 있을 때 배경 img 태그와 아이콘을 넣을 img 태그를 생성하여 여러 태그를 만드는 것 보다 가상 앨리먼트인 `::before`과 `::after`를 사용하여 넣는 것도 좋은 방법이 될 수 있을 것 같다. 또한 의미 없이 구분하기 위한 앨리먼트들에도 이 가상 선택자들을 사용하면 의미 없는 태그의 남용 없이 사용할 수 있을 것 같다.
+
+
+
+
+
+# `:focus-within`
+
+## 정의
+
+### CSS pseudo-classes 종류
+
+## 사용법/예시
+placeholder에서 작업
+
+## 결론
+
+
+
+
+
+# `nth-of-type`
+
+## 정의
+
+### `nth-of-type`. `:nth-child()` 차이
+
+#### `:nth-child()`린?
+
+## 사용법/예시
+
+## 결론
+
+
+
+
+
+
+# 속성 선택자 종류
+
+## 정의
+
+## 사용법/예시
+
+aside[id$=ad], section[id^=main]
+
+## 결론
+
+
+
+
+
+
+# flex-direction과 flex-flow 차이
+
+
+
+
+
+
+# grid와 flex
+
+## flex
+
+## grid, grid-row
+
+
+
+
+
+
+# vertical-align
